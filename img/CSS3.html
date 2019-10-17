@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      ul{
+        list-style: none;
+      }
+      a{
+        text-decoration: none;
+      }
+      .box{
+        height: 294px;
+        width: 238px;
+        border:1px solid #ccc ;
+        border-top: 3px solid gold;
+        margin-top: 100px;
+        margin-left: 50px;
+        box-sizing: border-box;  /* 内边距  不会撑开盒子*/
+      }
+      .box h3{
+        /*margin-left: 8px;   /*盒子下部边框跟着一起移动*/*/
+       padding-left:8px ;   /* h3没有给宽度,就不会撑开*/
+        line-height: 35px;
+        /*background: red;*/
+       font-size: 16px;
+       font-weight: normal;
+        height: 35px;
+        border-bottom:1px solid #ccc ;
+      }
+      .box img{
+        margin: 7px 0 0 8px;
+      }
+      .box ul li a {
+        text-align: center;
+        line-height: 26px;
+        margin-left:8px ;
+      }
+      .box ul li{
+        padding-left:10px ;
+        background:url(3.jpg)  no-repeat left center;
+      }
+      .box ul li  :hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div>
+        <h3>测试（test）</h3>
+        <img src="3.jpg" height="160px" width="218px" />
+        <ul>
+          <li><a href="../index.html">巴拉拉黑暗之神</a></li>
+        <li><a href="../index.html">巴拉拉黑暗之神</a></li>
+     <li><a href="../index.html">巴拉拉黑暗之神</a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

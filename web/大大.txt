@@ -1,0 +1,42 @@
+林冠宇@DESKTOP-5VMJF52 MINGW64 /d/test1
+$ git init
+Initialized empty Git repository in D:/test1/.git/
+
+林冠宇@DESKTOP-5VMJF52 MINGW64 /d/test1 (master)
+$ git add .
+
+林冠宇@DESKTOP-5VMJF52 MINGW64 /d/test1 (master)
+$ git init
+Reinitialized existing Git repository in D:/test1/.git/
+
+林冠宇@DESKTOP-5VMJF52 MINGW64 /d/test1 (master)
+$ git add .
+
+林冠宇@DESKTOP-5VMJF52 MINGW64 /d/test1 (master)
+$ git commit  -m 'fsf.txt'
+[master (root-commit) 5ff875b] fsf.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 fsf.txt
+
+林冠宇@DESKTOP-5VMJF52 MINGW64 /d/test1 (master)
+$ git remote add origin https://github.com/791572636/test1.git
+
+林冠宇@DESKTOP-5VMJF52 MINGW64 /d/test1 (master)
+$ git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 205 bytes | 205.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/791572636/test1.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+林冠宇@DESKTOP-5VMJF52 MINGW64 /d/test1 (master)
+$
+
+
+
+
+
+
+https://www.cnblogs.com/shenchanghui/p/7184101.html

@@ -28,6 +28,7 @@
 			left: 0;
 			border: 1px solid red;
 			transform-origin:left ; /* 左侧盒子按左边翻转*/
+			z-index: 50;
 		}
 		.door_r{
 			right: 0;
@@ -35,20 +36,23 @@
 			transform-origin:right;
 		}
 		.door_l::before{
-			content: '123';
+			content: 'open';
 			position: absolute;
 			right: 0;
 			top: 45%;
 			border: 1px solid red;
 			border-radius: 50px;
+			
+			
 		}
 			.door_r::before{
-			content: '123';
+			content: 'open';
 			position: absolute;
 			left: 0;
 			top: 45%;
 			border: 1px solid red;
 			border-radius: 50px;
+			
 		}
 		section:hover .door_l{
 			transform: rotateY(-130deg);    /*往左边翻转,所以是负数*/
@@ -56,10 +60,22 @@
 		section:hover .door_r{
 			transform: rotateY(130deg);    /*往左边翻转,所以是负数*/
 		}
+		a{ text-decoration: none;
+		color: red;
+		font-size: medium;
+		}
+		span{
+			position: absolute;
+			line-height: 300px;
+			left: 41%;
+			
+			
+		}
 	</style>
 	<body>
 		<section>
 			<div class="door_l"></div>
+			<span><a href="img/CSS3.html">链接到下一个页面</a></span>
 			<div class="door_r"></div>
 		</section>
 	</body>
