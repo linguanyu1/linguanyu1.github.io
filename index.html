@@ -1,66 +1,66 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title></title>
-    <style>
-      *{
-        margin: 0;
-        padding: 0;
-      }
-      ul{
-        list-style: none;
-      }
-      a{
-        text-decoration: none;
-      }
-      .box{
-        height: 294px;
-        width: 238px;
-        border:1px solid #ccc ;
-        border-top: 3px solid gold;
-        margin-top: 100px;
-        margin-left: 50px;
-        box-sizing: border-box;  /* 内边距  不会撑开盒子*/
-      }
-      .box h3{
-        /*margin-left: 8px;   /*盒子下部边框跟着一起移动*/*/
-       padding-left:8px ;   /* h3没有给宽度,就不会撑开*/
-        line-height: 35px;
-        /*background: red;*/
-       font-size: 16px;
-       font-weight: normal;
-        height: 35px;
-        border-bottom:1px solid #ccc ;
-      }
-      .box img{
-        margin: 7px 0 0 8px;
-      }
-      .box ul li a {
-        text-align: center;
-        line-height: 26px;
-        margin-left:8px ;
-      }
-      .box ul li{
-        padding-left:10px ;
-        background: url(img/QQ图片20191005233909.png)  no-repeat left center;
-      }
-      .box ul li  :hover {
-        text-decoration: underline;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="box">
-      <div>
-        <h3>林冠宇</h3>
-        <img src="img/3.jpg" height="160px" width="218px" />
-        <ul>
-          <li><a href="#"></a></li>
-        <li><a href="#">小卡住啦啦啦住啦啊啦</a></li>
-     <li><a href="#">小vv被卡啦住啦被啦啊啦</a></li>
-        </ul>
-      </div>
-    </div>
-  </body>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		section{
+			height: 300px;
+			width: 450px;
+			border: 1px solid #000;
+			margin: 100px auto;
+			background: url(img/2.jpg) no-repeat;
+			background-size: cover;
+			position: relative;
+			perspective: 1000px;  /*给父盒子添加透视,3D效果*/
+		}
+		.door_l, .door_r{
+			position: absolute;
+			top: 0;
+			width: 50%;
+			height: 100%;
+			background: gainsboro;
+			transition: all 2s; 
+			
+		}
+		.door_l{
+			left: 0;
+			border: 1px solid red;
+			transform-origin:left ; /* 左侧盒子按左边翻转*/
+		}
+		.door_r{
+			right: 0;
+			border: 1px solid red;
+			transform-origin:right;
+		}
+		.door_l::before{
+			content: '123';
+			position: absolute;
+			right: 0;
+			top: 45%;
+			border: 1px solid red;
+			border-radius: 50px;
+		}
+			.door_r::before{
+			content: '123';
+			position: absolute;
+			left: 0;
+			top: 45%;
+			border: 1px solid red;
+			border-radius: 50px;
+		}
+		section:hover .door_l{
+			transform: rotateY(-130deg);    /*往左边翻转,所以是负数*/
+		}
+		section:hover .door_r{
+			transform: rotateY(130deg);    /*往左边翻转,所以是负数*/
+		}
+	</style>
+	<body>
+		<section>
+			<div class="door_l"></div>
+			<div class="door_r"></div>
+		</section>
+	</body>
 </html>
